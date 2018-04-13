@@ -19,19 +19,19 @@
             <div id="myCarousel" class="carousel slide" align="middle">
                 <!-- 轮播（Carousel）指标 -->
                 <ol class="carousel-indicators">
-                    {% for i in range(0, pictures.length) %}
+                    {% for i in range(0, 1) %}
                     <li data-target="#myCarousel" data-slide-to="{{i}}"></li>
                     {% endfor %}
                 </ol>   
                 <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner">
-                    {% for i in range(0, pictures.length) %}
+                    {% for i in range(0, 1) %}
                     {% if i == 0 %}
                     <div class="item active">
                     {% else %}
                     <div class="item">
                     {% endif %}
-                        <img src="{{pictures[i].url}}" class="img-responsive" alt="{{pictures[i].name}}">
+                        <img src="{{picture_url}}" class="img-responsive" alt="{{picture}}">
                     </div>
                     {% endfor %}
                 </div>
@@ -46,50 +46,39 @@
     <div class="container" id="body">
         <hr>
         <div class="row">
-            <span style="font-weight: bold;">品牌：{{brandName}}</span>
+            <span style="font-weight: bold;">名称：{{name}}</span>
+        </div>
+        
+        <hr>
+
+        <div class="row">
+            <span style="font-weight: bold;">类型：{{p_type}}</span>
         </div>
         
         <hr>
         <div class="row">
-            <span style="font-weight: bold;">价格：<S>€{{price}}</S></span>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold">{{discount*10}}折</span>&nbsp;&nbsp;&nbsp;<span>€{{price*discount}}</span>
+            <span style="font-weight: bold;">体型：{{type}}</span>
+        </div>
+        
+        <hr>
+
+        <div class="row">
+            {% if discount == 1 %}
+            <span style="font-weight: bold;">价格：{{price}}</span>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold">暂无折扣</span>
+            {% else %}
+            <span style="font-weight: bold;">价格：<S>{{price}}</S></span>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold">{{discount*10}}折</span>&nbsp;&nbsp;&nbsp;<span>€{{price*discount}}</span>
+            {% endif %}
         </div>
 
         <hr>
-        <div class="row">
-            <span style="font-weight: bold;">库存：</span>
-        </div>
-        <div class="row">
-            <table class="table table-striped">
-                <tbody>
-                    <tr>
-                    <th>尺码：</th>
-                    {% for q,n in quantity %}
-                    <td>{{q}}</td>
-                    {% endfor %}
-                    </tr>
-                    <tr>
-                    <th>件数：</th>
-                    {% for q,n in quantity %}
-                    <td>{{n}}</td>
-                    {% endfor %}
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <hr>
+
         <div class="row">
         <span style="font-weight: bold;">商品描述：</span>
         </div>
         <div class="row">
-        {{description}}
+        {{color}}，{{material}}，{{desc}}
         </div>
         <hr>
-        <div class="row">
-        <span style="font-weight: bold;">海外直发：预计{{transport.duration.min}}至{{transport.duration.max}}到达</span>
-        </div>
-        <div class="row">
-        {{transport.description}}
-        </div>
     </div>
 </body>
 </html>
