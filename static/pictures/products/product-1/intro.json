@@ -1,0 +1,110 @@
+{
+  "typeId": "sweater-1",
+  "sizeType": "standard",
+  "currency": "EUR",
+  "pictures": [
+    {
+      "tags": [
+        "intro"
+      ],
+      "name": "1.jpg"
+    },
+    {
+      "tags": [
+        "front",
+        "model",
+        "scene"
+      ],
+      "name": "2.jpg"
+    },
+    {
+      "tags": [
+        "price"
+      ],
+      "name": "3.jpg"
+    },
+    {
+      "tags": [
+        "front",
+        "model",
+        "scene"
+      ],
+      "name": "4.jpg"
+    },
+    {
+      "tags": [
+        "back",
+        "scene"
+      ],
+      "name": "5.jpg"
+    },
+    {
+      "tags": [
+        "close-up",
+        "scene"
+      ],
+      "name": "6.jpg"
+    },
+    {
+      "tags": [
+        "front"
+      ],
+      "name": "7.jpg"
+    },
+    {
+      "tags": [
+        "front",
+        "scene"
+      ],
+      "name": "8.jpg"
+    },
+    {
+      "tags": [
+        "front",
+        "scene",
+        "model"
+      ],
+      "name": "9.jpg"
+    }
+  ],
+  "description": "衬里 成分：绒面皮 100%，表面 成分：羊毛 65%，表面 成分：聚酰胺 35%；洗涤方式：干洗",
+  "tags": [
+    "female",
+    "sweater",
+    "coat"
+  ],
+  "quantity": {
+    "XS": 21
+  },
+  "price": 790,
+  "transport": {
+    "description": "1个工作日和买手店确认，周二、周四发货，发货后预计10个工作日到达目的地",
+    "duration": {
+      "max": 19,
+      "min": 15
+    }
+  },
+  "type": "高领纯色毛衣",
+  "brandName": "Maison Margiela",
+  "color": "white",
+  "discount": 0.62,
+  "specifications": {
+    "wash": "dry_clean",
+    "sleeves": "long",
+    "collar": "high",
+    "season": "autumn_winter",
+    "closure": 
+    {
+      "style": "pullover"
+    },
+    "composition":{
+      "surface": {
+        "wool": 0.65,
+        "nylon": 0.35
+      },
+      "lining": {
+        "suede": 1
+      }
+    } 
+  }
+}
