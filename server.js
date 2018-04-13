@@ -49,5 +49,5 @@ process.on('uncaughtException',function(err){
 // add controllers:
 app.use(controller());
 
-app.listen(8080, '0.0.0.0');
+app.listen(8080, '127.0.0.1');
 console.log('server started at 0.0.0.0:8080...');
