@@ -8,7 +8,7 @@ function loadProducts(path) {
             shape.p_type = product.type;
             shape.price = product.price;
             shape.discount = product.discount;
-            shape.picture_url = `static/pictures/${shape.picture}.png`;
+            shape.picture_url = `static/pictures/product/${shape.picture}.png`;
         })
     });
     return result.products;
