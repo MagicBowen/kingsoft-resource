@@ -1,6 +1,5 @@
 const fs = require('mz/fs');
-
-const static_picture_path = 'static/pictures'
+const static_picture_path = 'static/pictures';
 
 async function fillImageToCtx(ctx, image) {
     if (await fs.exists(image)) {
@@ -13,10 +12,17 @@ async function fillImageToCtx(ctx, image) {
 
 var getImage = async (ctx, next) => {
     var name = ctx.query.name;
-    var image = `${static_picture_path}/${name}`;
+    var image = `${static_picture_path}/product/${name}`;
+    await fillImageToCtx(ctx, image);
+};
+
+var getCover = async (ctx, next) => {
+    var name = ctx.query.name;
+    var image = `${static_picture_path}/wechat-cover/${name}_s.png`;
     await fillImageToCtx(ctx, image);
 };
 
 module.exports = {
-    'GET /image': getImage
+    'GET /image': getImage,
+    'GET /cover': getCover
 };
